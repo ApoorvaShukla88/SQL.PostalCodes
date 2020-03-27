@@ -1,1 +1,6 @@
-select  zip, city, state, county from zipcodes where timezone = 'NULL' OR timezone = 'FALSE';
+
+use zipcode;
+show tables;
+describe zipcodes;
+select city, state, count(*) from zipcodes where timezone = 'FALSE' OR timezone = 'NULL';
+select distinct state,city, county from zipcodes where timezone = 'FALSE' OR timezone = 'NULL';

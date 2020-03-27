@@ -1,10 +1,11 @@
 use zipcode;
 select distinct state from zipcodes;
-describe zipcodes.timezone ;
-SELECT  county, state from zipcodes;
-SELECT  county + state from zipcodes;
-SELECT COUNT(county) FROM zipcodes;
+describe zipcodes;
+SELECT  county from zipcodes order by state;
+select concat(county, state) from zipcodes;
+SELECT  count(county) from zipcodes order by state;
 select distinct timezone from zipcodes;
+select  zip, city, state, county from zipcodes where timezone = 'FALSE' OR timezone = 'NULL';
 
-SELECT  county + state from zipcodes;
-select city, state from zipcodes group by timezone = 'NULL' OR timezone = 'FALSE';
+
+
